@@ -887,6 +887,23 @@ section .container {
   right: 15px;
 }
 
+
+.projectpage{
+  background-color: red;
+  position: relative;
+  height:auto;
+  margin: auto;
+  padding: 20px;
+  max-width: 1280px;
+			background: rgba(81, 64, 242, 0.3);
+			border-radius: 10px;
+}
+
+.projectpage:hover {
+  background-color: rgba(81, 64, 242, 0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
