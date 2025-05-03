@@ -15,11 +15,43 @@ body {
   background: transparent;
 }
 
+
+.check55 {
+  background: url(../img/background/background.png);
+  animation: slideIn 1s ease-in-out forwards;
+
+padding: 50px;
+padding-left: 100px;
+border-top-left-radius: 25%;
+border-bottom-right-radius: 25%;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-10%);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2; /* Push behind content */
+  filter: blur(10px);
+}
+
 body::before {
   content: "";
   position: fixed;
-  background: #010e1b;
   background-size: cover;
+  /* background: url; */
   left: 0;
   right: 0;
   top: 0;
@@ -54,9 +86,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   display: flex;
   align-items: center;
-  z-index: 997;
+  z-index: 999;
   overflow-y: auto;
-}
+  }
 
 #header * {
   transition: ease-in-out 0s;
@@ -104,17 +136,21 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.749);
   color: #fff;
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
   width: 40px;
   height: 40px;
+
+  
 }
+
 
 #header .social-links a:hover {
   background: #1c7d32;
+  transition: background 0.3s ease-in-out;
 }
 
 @media (max-width: 992px) {
@@ -276,7 +312,9 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: #09203a;
+  background: url(../img/background/background.png);
+opacity: 0.9;
+overflow: hidden;
 }
 
 #header.header-top .social-links, #header.header-top h2 {
@@ -291,6 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-top .container {
   display: flex;
   align-items: center;
+  
 }
 
 #header.header-top .nav-menu {
@@ -316,7 +355,7 @@ section {
   top: 140px;
   bottom: 100%;
   opacity: 0;
-  z-index: 2;
+  z-index: auto;
 }
 
 section.section-show {
@@ -949,7 +988,7 @@ section .container {
   color: #fff;
   line-height: 1;
   margin-right: 12px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .contact .info-box .social-links a:hover {
