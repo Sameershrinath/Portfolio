@@ -369,8 +369,8 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0);
   padding: 30px;
+  color: white;
 }
 
 @media (max-width: 768px) {
