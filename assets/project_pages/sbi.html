@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGO Encoding and Decoding Project</title>
+    <link rel="stylesheet" href="../css/projectpages.css">
+</head>
+
+<body>
+    <center>
+        <h1>LOGO Encoding and Decoding Project</h1>
+    </center>
+    <center>
+        <iframe class="youtubevideo" src="https://www.youtube.com/embed/VNOGLszt-44"
+            title="Encode Numbers in SBI Logo Using Color | Unique Python Project! | Final year project idea"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center>
+
+    <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
+        <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Python
+        </span>
+        <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Image-encoding
+        </span>
+        <span style="background-color:#0C4B33; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            PIL
+        </span>
+        <span style="background-color:#CC0000; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            NumPy
+        </span>
+    </div>
+
+    <section class="project-buttons" style="text-align:center; margin: 30px 0;">
+        <a href="https://github.com/Sameershrinath/SBI_passbook.git">
+            <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+                GITHUB
+            </button>
+        </a>
+    </section>
+
+    <section class="project-essay">
+        <h2>LOGO Encoding and Decoding Project</h2>
+        <h3>Overview</h3>
+        <p>
+            This project implements a unique way of encoding numerical data into visual patterns using logos. It provides two main implementations:
+        </p>
+        <ul>
+            <li><strong>Basic Circle-based Encoding (24-bit):</strong> Encodes a 24-bit number into a pattern of colored circles.</li>
+            <li><strong>SBI Logo-based Encoding (24-bit):</strong> Encodes a 24-bit number using miniature SBI logo patterns.</li>
+        </ul>
+        <h3>Features</h3>
+        <ul>
+            <li>Visual encoding of numbers using color and logo patterns</li>
+            <li>Decoding functionality to retrieve the original number from the image</li>
+            <li>Robust error handling and input validation</li>
+        </ul>
+        <h3>Technical Details</h3>
+        <ul>
+            <li>Image size: 500×500 pixels, 8×3 grid</li>
+            <li>Circle/Logo size: 40×40 pixels</li>
+            <li>Supports RGB and RGBA formats</li>
+            <li>Dependencies: PIL (Pillow), NumPy, Python 3.x</li>
+        </ul>
+        <h3>Usage Example</h3>
+        <pre>
+# Encode a number into circles
+encoded_image = create_color_logo_from_number(11354783)
+encoded_image.show()
+encoded_image.save("encoded_logo.jpg", format="JPEG")
+
+# Decode the image back to number
+binary_result, decoded_number = decode_color_logo(encoded_image)
+print(f"Binary: {binary_result}")
+print(f"Decoded number: {decoded_number}")
+        </pre>
+        <h3>Applications</h3>
+        <ul>
+            <li>Data Visualization</li>
+            <li>Steganography</li>
+            <li>Brand Integration</li>
+            <li>Educational Tool</li>
+            <li>Design Patterns</li>
+        </ul>
+    </section>
+</body>
+</html>
