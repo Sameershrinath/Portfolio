@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System | Content-Based Filtering Using Python</title>
+    <meta name="description" content="A sophisticated movie recommendation system built with Python, using TF-IDF vectorization and cosine similarity for content-based filtering. Discover similar movies based on genre, cast, and crew.">
+    <meta name="keywords" content="movie recommendation system, Python, machine learning, TF-IDF vectorizer, cosine similarity, content-based filtering, movie suggestions, data science project">
+    <meta name="author" content="Sameer Shrinath">
+    
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="Movie Recommendation System | Content-Based Filtering">
+    <meta property="og:description" content="Discover a Python-based movie recommendation system using machine learning techniques for personalized movie suggestions.">
+    <meta property="og:image" content="../img/project/movie.png">
+    <meta property="og:url" content="https://yourwebsite.com/assets/project_pages/movierecco.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Movie Recommendation System | Content-Based Filtering">
+    <meta name="twitter:description" content="Discover a Python-based movie recommendation system using machine learning techniques for personalized movie suggestions.">
+    <meta name="twitter:image" content="../img/project/movie.png">
+    
+    <!-- Technical SEO -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourwebsite.com/assets/project_pages/movierecco.html">
+    
+    <link rel="stylesheet" href="../css/projectpages.css">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Movie Recommendation System using Python and Machine Learning",
+      "description": "A content-based movie recommendation system that suggests similar movies using TF-IDF vectorization and cosine similarity",
+      "author": {
+        "@type": "Person",
+        "name": "Sameer Shrinath"
+      },
+      "keywords": "movie recommendation system, Python, machine learning, TF-IDF, cosine similarity",
+      "skills": ["Python", "Pandas", "Scikit-learn", "NumPy", "Machine Learning"],
+      "programmingLanguage": ["Python"],
+      "datePublished": "2023",
+      "category": "Machine Learning Projects"
+    }
+    </script>
+
+</head>
+
+<body>    <center>
+        <h1>Movie Recommendation System</h1>
+    </center>
+
+        <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
+            <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+                Python
+            </span>
+            <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+                Pandas
+            </span>
+            <span style="background-color:#F7931E; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+                Scikit-learn
+            </span>
+            <span style="background-color:#013243; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+                NumPy
+            </span>
+        </div>        <section class="project-buttons" style="text-align:center; margin: 30px 0;">
+<a href="https://github.com/Sameershrinath/ML-Projects/blob/cac74c0412df5bafd9411e1bb5be4f5387b5a29c/Movie%20Roccomondation%20system/movies.csv" target="_blank" style="text-decoration:none;">
+     <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+            View Dataset
+      </button>
+</a>
+<a href="https://github.com/Sameershrinath/ML-Projects/blob/cac74c0412df5bafd9411e1bb5be4f5387b5a29c/Movie%20Roccomondation%20system/movie.ipynb" target="_blank" style="text-decoration:none;">
+    <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+        View Code
+    </button>
+</a>
+    
+</section>
+
+<section class="project-essay">
+    <h2>Movie Recommendation System</h2>
+    <h3>Project Overview</h3>
+    <p>
+        This is a content-based movie recommendation system built using Python and machine learning libraries. It suggests similar movies to the one selected by a user by analyzing metadata such as genre, keywords, cast, and crew. The core of the system is powered by the TF-IDF vectorizer and cosine similarity.
+    </p>    <h3>Key Features</h3>
+    <p>
+        The system incorporates several key features:
+        <ul>
+            <li><strong>Data Processing:</strong> Reads and processes a movie dataset from CSV format.</li>
+            <li><strong>Text Vectorization:</strong> Converts text features into numerical form using TF-IDF vectorization.</li>
+            <li><strong>Similarity Calculation:</strong> Calculates cosine similarity between movies based on their textual features.</li>
+            <li><strong>Fuzzy Matching:</strong> Identifies the most similar movies using the difflib module for fuzzy matching of movie titles.</li>
+        </ul>
+    </p>
+    <h3>Technical Implementation</h3>
+    <p>
+        The project utilizes a combination of powerful Python libraries and techniques:
+        <ul>
+            <li><strong>Pandas & NumPy:</strong> For efficient data manipulation and numerical operations.</li>
+            <li><strong>Scikit-learn:</strong> Provides the TF-IDF vectorizer for text feature extraction.</li>
+            <li><strong>Cosine Similarity:</strong> Measures the similarity between movies based on their vectorized features.</li>
+            <li><strong>Difflib:</strong> Implements fuzzy string matching for better user input handling.</li>
+        </ul>
+    </p>
+    <h3>Learning Outcomes</h3>
+    <p>
+        Through this project, I gained valuable experience in:
+        <ul>
+            <li>Handling and processing real-world datasets using pandas.</li>
+            <li>Extracting and engineering relevant text features for recommendation systems.</li>
+            <li>Implementing content-based filtering using TF-IDF and cosine similarity.</li>
+            <li>Enhancing user experience with fuzzy string matching for more flexible input handling.</li>
+        </ul>
+    </p>
+    <h3>Technical Challenges</h3>
+    <p>
+        The development process involved overcoming several technical challenges:
+        <ul>
+            <li>Efficient processing of large text datasets.</li>
+            <li>Optimizing the vectorization process for better performance.</li>
+            <li>Implementing an effective similarity calculation system.</li>
+            <li>Creating a user-friendly interface for movie selection.</li>
+        </ul>
+    </p>
+    <p>
+        The project demonstrates the practical application of machine learning concepts in creating a real-world recommendation system that can help users discover movies based on their preferences.
+    </p>
+</section>
+
+
+
+
+
+</body>
+
+</html>
