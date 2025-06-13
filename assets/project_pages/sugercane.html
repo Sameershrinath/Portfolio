@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+Date : 14.06.2025
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/projectpages.css">
+
+</head>
+<body>
+    <center>
+        <h1>Sugarcane Data Analysis Project</h1>
+    </center>
+
+    <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
+        <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Python
+        </span>
+        <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Pandas
+        </span>
+        <span style="background-color:#0C4B33; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Matplotlib
+        </span>
+        <span style="background-color:#E67E22; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Seaborn
+        </span>
+        <span style="background-color:#8E44AD; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            ydata_profiling
+        </span>
+    </div>
+
+    <section class="project-buttons" style="text-align:center; margin: 30px 0;">
+        <a href="https://github.com/Sameershrinath/5th_sem/blob/a8f60b90a272f5ef1e45b8e8b665b517ff44a809/PYTHON/DATA_SCIENCE/Dataset/Sugarcane_production.csv">
+            <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+                View Dataset
+            </button>
+        </a>
+        <a href="https://github.com/Sameershrinath/5th_sem/blob/a8f60b90a272f5ef1e45b8e8b665b517ff44a809/PYTHON/DATA_SCIENCE/Data_analysis01.ipynb">
+            <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+                View Code
+            </button>
+        </a>
+    </section>
+
+    <section class="project-essay">
+        <h2>Project Overview</h2>
+        <p>
+            This project analyzes sugarcane production data across different countries and continents using Python data analysis tools.
+        </p>
+
+        <h3>Technologies Used</h3>
+        <ul>
+            <li>Python</li>
+            <li>Pandas for data manipulation</li>
+            <li>Matplotlib and Seaborn for visualization</li>
+            <li>ydata_profiling for automated reporting</li>
+        </ul>
+
+        <h3>Analysis Steps</h3>
+        <ol>
+            <li>
+                <strong>Data Loading and Cleaning</strong>
+                <ul>
+                    <li>Loaded sugarcane production dataset</li>
+                    <li>Removed unnecessary index column</li>
+                    <li>Cleaned numeric data by removing dots and fixing decimal separators</li>
+                    <li>Handled missing values</li>
+                    <li>Converted data types to appropriate numeric formats</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Exploratory Data Analysis</strong>
+                <ul>
+                    <li>Dataset shape: Shows number of rows and columns</li>
+                    <li>Analyzed continental distribution of sugarcane production</li>
+                    <li>Created visualizations for key metrics:
+                        <ul>
+                            <li>Production (Tons)</li>
+                            <li>Production per Person (Kg)</li>
+                            <li>Acreage (Hectare)</li>
+                            <li>Yield (Kg/Hectare)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Key Visualizations</strong>
+                <ul>
+                    <li>Box plots showing distribution of main metrics</li>
+                    <li>Histograms with KDE for numeric variables</li>
+                    <li>Pie chart showing top producers' percentage</li>
+                    <li>Bar plots for top producing countries</li>
+                    <li>Heat map for correlation analysis</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Key Findings</h3>
+        <ol>
+            <li>
+                <strong>Continental Distribution</strong>
+                <ul>
+                    <li>Visualized number of sugarcane-growing countries per continent</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Production Analysis</strong>
+                <ul>
+                    <li>Created percentage analysis of top producers</li>
+                    <li>Identified leading countries in production</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Land Usage</strong>
+                <ul>
+                    <li>Analyzed countries with highest acreage</li>
+                    <li>Compared land use vs production</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Yield Analysis</strong>
+                <ul>
+                    <li>Identified countries with highest yield per hectare</li>
+                    <li>Examined relationship between land area and production</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Tools for Further Analysis</h3>
+        <ul>
+            <li>Generated comprehensive profile report using ydata_profiling</li>
+            <li>Created correlation matrix to understand relationships between variables</li>
+        </ul>
+    </section>
+</body>
+
+</html>
