@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/projectpages.css">
+
+</head>
+<body>
+    <center>
+        <h1>Black Friday Sales Data Analysis</h1>
+    </center>
+
+    <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
+        <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Python
+        </span>
+        <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Pandas
+        </span>
+        <span style="background-color:#0C4B33; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Matplotlib
+        </span>
+        <span style="background-color:#4C4C4C; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Seaborn
+        </span>
+        <span style="background-color:#F37626; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Jupyter Notebook
+        </span>
+    </div>
+
+    <section class="project-buttons" style="text-align:center; margin: 30px 0;">
+        <a href="https://github.com/Sameershrinath/5th_sem/blob/d01c62bdce74fd12bdc904453331e07cc9bab55c/PYTHON/DATA_SCIENCE/Dataset/BlackFriday.csv" target="_blank">
+            <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+                View Dataset
+            </button>
+        </a>
+        <a href="https://github.com/Sameershrinath/5th_sem/blob/d01c62bdce74fd12bdc904453331e07cc9bab55c/PYTHON/DATA_SCIENCE/Data_analysis02.ipynb" target="_blank">
+            <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+                View Code
+            </button>
+        </a>
+    </section>
+
+    <section class="project-essay">
+        <h2>Tools and Technologies Used</h2>
+        <ul>
+            <li><strong>Basic Python</strong></li>
+            <li><strong>Pandas</strong></li>
+            <li><strong>Matplotlib &amp; Seaborn</strong></li>
+            <li><strong>Jupyter Notebook</strong></li>
+            <li><strong>Basic Data Analysis</strong></li>
+        </ul>
+        <hr>
+
+        <h2>Dataset Details</h2>
+        <ul>
+            <li><strong>Dataset Name:</strong> Black Friday Sales Data</li>
+            <li><strong>Size:</strong> 23 MB CSV file, 537,000+ rows, 12 columns</li>
+            <li><strong>Columns:</strong> User ID, Product ID, Gender, Age, Occupation, City Category, Stay in Current City Years, Marital Status, Product Categories, Purchase amount</li>
+        </ul>
+        <hr>
+
+        <h2>Project Steps Overview</h2>
+
+        <h3>1. Walkthrough of the Dataset</h3>
+        <ul>
+            <li><strong>Goal:</strong> Load and inspect the dataset to understand its structure.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Load the dataset into a pandas DataFrame.</li>
+                    <li>Examine structure and check for missing values.</li>
+                    <li>Use <code>df.info()</code> for column types and non-null entries.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>2. Analyzing Columns</h3>
+        <ul>
+            <li><strong>Goal:</strong> Understand distributions and relevance of each column.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Focus on Gender, Age, Marital_Status, Product_Category, and Purchase.</li>
+                    <li>Drop sparse columns (Product_Category_2, Product_Category_3).</li>
+                    <li>Use <code>unique()</code> and <code>nunique()</code> for overview.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>3. Analyzing Gender</h3>
+        <ul>
+            <li><strong>Goal:</strong> Explore gender distribution and purchasing trends.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Identify data imbalance (more male customers).</li>
+                    <li>Use <code>groupby()</code> to analyze purchase totals by gender.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>4. Analyzing Age &amp; Marital Status</h3>
+        <ul>
+            <li><strong>Goal:</strong> Examine how age and marital status affect purchases.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Categorize users by age and marital status.</li>
+                    <li>Analyze spending patterns across groups.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>5. Multi Column Analysis</h3>
+        <ul>
+            <li><strong>Goal:</strong> Analyze relationships between multiple factors.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Combine Age, Marital Status, and Gender.</li>
+                    <li>Use visualizations (pie/bar plots) for insights.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>6. Occupation and Products Analysis</h3>
+        <ul>
+            <li><strong>Goal:</strong> Explore how occupation influences purchases and product popularity.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Analyze Occupation, Product_ID, and Product_Category_1.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>7. Combining Gender &amp; Marital Status</h3>
+        <ul>
+            <li><strong>Goal:</strong> Investigate combined effects on purchasing behavior.</li>
+            <li><strong>Actions:</strong>
+                <ul>
+                    <li>Visualize with Seaborn count plots.</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+
+        <h2>Conclusion</h2>
+        <p>
+            This project provides insights into Black Friday shoppers' purchasing behavior and the influence of demographic factors such as gender, age, marital status, and occupation. The workflow covers data cleaning, individual column analysis, and multi-feature analysis to uncover hidden patterns in the dataset.
+        </p>
+    </section>
+</body>
+
+</html>
