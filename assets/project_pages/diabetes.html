@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/projectpages.css">
+
+</head>
+
+<body>
+    <center>
+        <h1>Diabetes Prediction Web App</h1>
+    </center>
+
+    <section style="max-width: 800px; margin: 0 auto; padding: 24px;">
+        <h2>Overview</h2>
+        <p>
+            This project is a machine learning-based web application that predicts whether a person is diabetic or not using medical input data. It uses a trained classification model served via a FastAPI backend.
+        </p>
+
+        <h3>Tech Stack Used</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+            <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">Python</span>
+            <span style="background-color:#F7931E; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">Scikit-learn</span>
+            <span style="background-color:#009688; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">FastAPI</span>
+            <span style="background-color:#4B8BBE; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">Pydantic</span>
+            <span style="background-color:#7A86B8; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">Pickle</span>
+            <span style="background-color:#E44D26; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">HTML/CSS/JS</span>
+            <span style="background-color:#7A86B8; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">Render</span>
+        </div>
+
+        <h3>How It Works</h3>
+        <ol>
+            <li>
+                <strong>Model Training (Offline):</strong>
+                <ul>
+                    <li>Dataset used: <b>PIMA Indian Diabetes Dataset</b>.</li>
+                    <li>Preprocessed data and trained a classifier using Scikit-learn.</li>
+                    <li>Model saved using pickle.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>API Integration (FastAPI):</strong>
+                <ul>
+                    <li>Created a POST endpoint <code>/diabetes_prediction</code> to accept medical data.</li>
+                    <li>The input is parsed using Pydantic's BaseModel.</li>
+                    <li>Data is converted into a format that the model understands.</li>
+                    <li>The trained model returns a prediction (diabetic or not diabetic).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Frontend:</strong>
+                <ul>
+                    <li>A simple HTML form collects user input.</li>
+                    <li>Sends the data to the FastAPI backend using fetch or axios.</li>
+                    <li>Displays prediction results to the user.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Input Parameters</h3>
+        <ul>
+            <li>Pregnancies</li>
+            <li>Glucose</li>
+            <li>Blood Pressure</li>
+            <li>Skin Thickness</li>
+            <li>Insulin</li>
+            <li>BMI</li>
+            <li>Diabetes Pedigree Function</li>
+            <li>Age</li>
+        </ul>
+
+        <h3>Prediction Output</h3>
+        <ul>
+            <li><b>the person is diabetic</b></li>
+            <li><b>the person is not diabetic</b></li>
+        </ul>
+
+        <h3>Future Enhancements</h3>
+        <ul>
+            <li>Add user authentication & login.</li>
+            <li>Store prediction history in a database.</li>
+        </ul>
+
+        <div style="display: flex; gap: 16px; margin-top: 32px;">
+            <a href="https://diabetes-predictionapi.onrender.com/" target="_blank" style="text-decoration: none;">
+                <button style="background-color:#009688; color:white; padding:12px 28px; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer;">
+                    Visit Website
+                </button>
+            </a>
+            <a href="https://github.com/Sameershrinath/Diabetes_predictionAPI.git" target="_blank" style="text-decoration: none;">
+                <button style="background-color:#24292e; color:white; padding:12px 28px; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer;">
+                    View on GitHub
+                </button>
+            </a>
+        </div>
+    </section>
+
+</body>
+
+</html>
