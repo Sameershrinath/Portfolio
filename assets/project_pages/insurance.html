@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/projectpages.css">
+
+</head>
+<body>
+    <center>
+        <h1>Insurance Premium Prediction API</h1>
+    </center>
+
+    <section style="max-width: 800px; margin: 10; padding: 24px;">
+        <h2>Project Overview</h2>
+        <p>
+            This is a Machine Learning API project that predicts insurance premium categories based on user demographics and lifestyle factors. The project implements a complete ML pipeline with a FastAPI backend and Streamlit frontend.
+        </p>
+
+        <!-- Tech Stack Pills -->
+        <div style="margin-bottom: 24px;"></div>
+            <span style="display:inline-block; background:#009688; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">FastAPI</span>
+            <span style="display:inline-block; background:#1976d2; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">Pydantic</span>
+            <span style="display:inline-block; background:#f9a825; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">scikit-learn</span>
+            <span style="display:inline-block; background:#212121; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">pandas</span>
+            <span style="display:inline-block; background:#7e57c2; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">pickle</span>
+            <span style="display:inline-block; background:#ff7043; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">uvicorn</span>
+            <span style="display:inline-block; background:#ff5e5e; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">Streamlit</span>
+            <span style="display:inline-block; background:#384d54; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">Docker</span>
+            <span style="display:inline-block; background:#3776ab; color:#fff; border-radius:16px; padding:6px 18px; margin:4px; font-size:15px;">Python 3.10</span>
+        </div>
+
+        <h3>Tech Stack</h3>
+        <ul>
+            <li><b>Backend:</b>
+                <ul>
+                    <li>FastAPI - Modern, fast web framework for building APIs</li>
+                    <li>Pydantic - Data validation and settings management</li>
+                    <li>scikit-learn - Machine learning library</li>
+                    <li>pandas - Data manipulation and analysis</li>
+                    <li>pickle - Model serialization</li>
+                    <li>uvicorn - ASGI server</li>
+                </ul>
+            </li>
+            <li><b>Frontend:</b>
+                <ul>
+                    <li>Streamlit - Web app framework for ML applications</li>
+                </ul>
+            </li>
+            <li><b>Deployment:</b>
+                <ul>
+                    <li>Docker - Containerization</li>
+                    <li>Python 3.10 - Base runtime environment</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Machine Learning Model</h3>
+        <ul>
+            <li><b>Algorithm:</b> Random Forest Classifier - Ensemble learning method for classification</li>
+            <li><b>Input Features:</b>
+                <ul>
+                    <li>age: User's age (1-119 years)</li>
+                    <li>weight: Weight in kg</li>
+                    <li>height: Height in meters (max 2.5m)</li>
+                    <li>income_lpa: Annual income in lakhs per annum</li>
+                    <li>smoker: Boolean - smoking status</li>
+                    <li>city: City name for tier classification</li>
+                    <li>occupation: One of 7 categories (retired, freelancer, student, government_job, business_owner, unemployed, private_job)</li>
+                </ul>
+            </li>
+            <li><b>Computed Features:</b>
+                <ul>
+                    <li>BMI: weight / (height²)</li>
+                    <li>Lifestyle Risk: Based on smoking + BMI
+                        <ul>
+                            <li>High: Smoker + BMI &gt; 30</li>
+                            <li>Medium: Smoker OR BMI &gt; 27</li>
+                            <li>Low: Neither condition</li>
+                        </ul>
+                    </li>
+                    <li>Age Group: young (&lt;25), adult (25-44), middle_aged (45-59), senior (60+)</li>
+                    <li>City Tier: 1 (metro), 2 (major cities), 3 (others)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>API Endpoints</h3>
+        <ul>
+            <li><b>POST /predict</b>: Predicts insurance premium category for a user.</li>
+        </ul>
+
+        <h3>Features</h3>
+        <ul>
+            <li><b>Data Validation:</b> Pydantic models ensure input data integrity, field validation with custom constraints, type safety with Annotated types</li>
+            <li><b>City Classification:</b>
+                <ul>
+                    <li>Tier 1 Cities: 7 major metros (Mumbai, Delhi, Bangalore, etc.)</li>
+                    <li>Tier 2 Cities: 47 major cities</li>
+                    <li>Tier 3 Cities: All other locations</li>
+                </ul>
+            </li>
+            <li><b>Frontend Interface:</b> Interactive form with input validation, real-time prediction via API calls, error handling for connection issues, user-friendly results display</li>
+        </ul>
+
+        <h3>Model Information</h3>
+        <ul>
+            <li>Source: CampusX FastAPI Demo</li>
+            <li>Algorithm: Random Forest Classifier</li>
+            <li>File: insurance_model.pkl (serialized model)</li>
+        </ul>
+
+        <h3>Key Benefits</h3>
+        <ul>
+            <li>Scalable Architecture - Microservices approach with API</li>
+            <li>Data Validation - Robust input validation with Pydantic</li>
+            <li>Containerized - Easy deployment with Docker</li>
+            <li>Interactive UI - User-friendly Streamlit interface</li>
+            <li>RESTful API - Can be integrated with other applications</li>
+        </ul>
+
+
+        <div style="display: flex; gap: 16px; margin-top: 32px;">
+            <a href="https://sam-insurance-predictor.streamlit.app/" target="_blank" style="text-decoration: none;">
+                <button style="background-color:#009688; color:white; padding:12px 28px; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer;">
+                    Visit Website
+                </button>
+            </a>
+            <a href="https://github.com/Sameershrinath/Insurance_predictor_app.git" target="_blank" style="text-decoration: none;">
+                <button style="background-color:#24292e; color:white; padding:12px 28px; border:none; border-radius:8px; font-size:16px; font-weight:600; cursor:pointer;">
+                    View on GitHub
+                </button>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
