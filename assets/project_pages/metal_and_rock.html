@@ -8,101 +8,116 @@
     <link rel="stylesheet" href="../css/projectpages.css">
 
 </head>
-
 <body>
     <center>
-        <h1>Metal and Rock Detection - ML </h1>
+        <h1>SONAR Metal and Rock Detection - ML</h1>
     </center>
-    <center><iframe class="youtubevideo"  src="https://www.youtube.com/embed/CaStCUt_G7Y"
-            title="EDA of COVID-19 Data from Kaggle || Suresh Gyan vihar University Jagatpura Jaipur" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><h5>Video explanation</h5>
-        </center>
 
+    <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
+        <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Python
+        </span>
+        <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            NumPy
+        </span>
+        <span style="background-color:#0C4B33; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Pandas
+        </span>
+        <span style="background-color:#F7931E; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Scikit-learn
+        </span>
+        <span style="background-color:#E10098; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
+            Jupyter Notebook
+        </span>
+    </div>
 
-        <div style="display: flex; justify-content: center; gap: 16px; margin: 24px 0;">
-            <span style="background-color:#3572A5; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
-                Python
-            </span>
-            <span style="background-color:#FFD43B; color:#222; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
-                Pandas
-            </span>
-            <span style="background-color:#0C4B33; color:white; padding:8px 20px; border-radius:20px; font-size:15px; font-weight:500;">
-                Matplotlib
-            </span>
-        </div>
+    <section class="project-buttons" style="text-align:center; margin: 30px 0;">
+        <a href="https://github.com/Sameershrinath/ML-Projects/blob/567dab654d65cbbb59537fe7a9bcbbda5fd69e6f/SONAR/Metal_and_rock_dect.ipynb"><button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+            View Code
+        </button></a>
+        <a href="https://github.com/Sameershrinath/ML-Projects/blob/cac74c0412df5bafd9411e1bb5be4f5387b5a29c/SONAR/sonar_data.csv"><button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
+            View Dataset
+        </button></a>
+    </section>
 
-        <section class="project-buttons" style="text-align:center; margin: 30px 0;">
-   <a href="https://github.com/Sameershrinath/CoronaDataAnalysis/tree/7c0739b27855ce74beb84d31007844fea825e3a5/corona%20Data"> <button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
-        View Dataset
-    </button></a>
-   <a href="https://github.com/Sameershrinath/CoronaDataAnalysis.git"><button style="background-color:#2196F3; color:white; border:none; padding:12px 28px; margin:8px; border-radius:5px; font-size:16px; cursor:pointer;">
-        View Code
-    </button></a> 
-    
-</section>
-
-<section class="project-essay">
-    <h2>EDA of COVID-19 Data from Kaggle</h2>
-    <h3>Introduction to COVID-19 Data Analysis</h3>
-    <p>
-        This project discusses a comprehensive exploratory data analysis (EDA) of COVID-19 data sourced from Kaggle, utilizing Python programming. The objective is to uncover patterns in the COVID-19 dataset while predicting future outcomes such as survival and mortality rates.
-    </p>
-    <h3>Tools and Libraries Used</h3>
-    <p>
-        The analysis employs several Python libraries:
+    <section class="project-essay">
+        <h2>SONAR Metal and Rock Detection Project</h2>
+        <h3>Project Overview</h3>
+        <p>
+            This project implements a binary classification system to distinguish between metal objects (mines) and rocks using sonar signal data. The system analyzes sonar return patterns to classify underwater or underground objects, which has practical applications in naval mine detection, underwater exploration, and geological surveys.
+        </p>
+        <h3>Technical Stack</h3>
         <ul>
-            <li><strong>Pandas</strong> for managing the data frames.</li>
-            <li><strong>Matplotlib</strong> and <strong>Seaborn</strong> for data visualization.</li>
+            <li><strong>Python 3.x</strong> - Primary programming language</li>
+            <li><strong>Jupyter Notebook</strong> - Development environment</li>
+            <li><strong>NumPy</strong> - Numerical computations and array operations</li>
+            <li><strong>Pandas</strong> - Data manipulation and analysis</li>
+            <li><strong>Scikit-learn</strong> - Machine learning framework</li>
         </ul>
-        These tools are essential for manipulating large datasets and providing visual insights into the data.
-    </p>
-    <h3>Population and Testing Analysis</h3>
-    <p>
-        The first step in the analysis involves determining the population of different countries from the dataset. For instance, India emerges as the country with the highest population. Understanding population figures is crucial for further analysis, as it provides context for metrics like survival and mortality rates.
-    </p>
-    <p>
-        Testing rates are also examined, with the United States recording the highest number of tests performed. This metric is vital, as a higher testing rate can lead to more accurate identification of COVID-19 cases, impacting the apparent spread of the virus.
-    </p>
-    <h3>Mortality and Survival Rates</h3>
-    <p>
-        The analysis calculates survival rates, defined as the probability of a person surviving COVID-19. This is derived by calculating the inverse of the mortality rate, which reflects the likelihood of death due to the virus. The analysis identifies that the lowest survival rate is in Yemen, while the highest is reported in Western Sahara.
-    </p>
-    <p>
-        Visualizations are generated to represent these metrics clearly. For instance, charts depict the total deaths across countries, highlighting the United States as the country with the highest fatalities, followed by Iran and India.
-    </p>
-    <h3>Data Visualization Insights</h3>
-    <p>
-        Visualization plays a key role in making the data comprehensible, especially for non-technical audiences. The video showcases several graphs, including:
+        <h3>Project Details</h3>
         <ul>
-            <li>A scatter plot showing the relationship between total cases and total deaths across seven continents.</li>
-            <li>A visualization of the top 10 countries by total tests performed, reaffirming the data findings.</li>
+            <li><strong>Features:</strong> 60 sonar signal attributes (columns 0-59)</li>
+            <li><strong>Target Variable:</strong> Binary classification (Column 60): <b>M</b> = Mines (Metal objects), <b>R</b> = Rocks</li>
+            <li><strong>Data Format:</strong> CSV file without headers</li>
         </ul>
-    </p>
-    <h3>Conclusion of Analysis</h3>
-    <p>
-        The analysis concludes by emphasizing the importance of understanding both the mortality rate and the survival rate in the context of the pandemic. The findings illustrate significant disparities between countries, reflecting the varied impact of COVID-19 globally.
-    </p>
-    <p>
-        For those interested in further exploration, a GitHub link is provided for accessing the Jupyter notebook and dataset used in the analysis.
-    </p>
-</section>
-
-
-
-<section class="project-pdf">
-    
-    <br><br>
-    <center><iframe class="pdfviewer" src="../pdfs/corona_pdf.pdf">
-        <h2>Download or View the Full EDA Report (PDF)</h2>
-    <a href="../pdfs/corona_pdf.pdf" target="_blank" download style="display:inline-block; background-color:#2196F3; color:white; padding:12px 28px; border-radius:5px; text-decoration:none; font-size:16px; font-weight:500; margin:8px 0;">
-        Download PDF
-    </a>
-        This browser does not support PDFs. Please download the PDF to view it: 
-        <a href="../pdfs/corona_eda_report.pdf">Download PDF</a>
-    </iframe></center>
-</section>
+        <h4>Machine Learning Pipeline</h4>
+        <ol>
+            <li><b>Data Preprocessing:</b>
+                <ul>
+                    <li>Statistical analysis using <code>describe()</code></li>
+                    <li>Class distribution analysis with <code>value_counts()</code></li>
+                    <li>Feature-target separation</li>
+                </ul>
+            </li>
+            <li><b>Data Splitting:</b>
+                <ul>
+                    <li>Training set: 90% of data</li>
+                    <li>Test set: 10% of data</li>
+                    <li>Stratified sampling to maintain class balance</li>
+                    <li>Random state = 1 for reproducibility</li>
+                </ul>
+            </li>
+            <li><b>Model Training:</b>
+                <ul>
+                    <li>Algorithm: Logistic Regression</li>
+                    <li>Type: Binary classification</li>
+                    <li>Fits linear decision boundary between classes</li>
+                </ul>
+            </li>
+            <li><b>Model Evaluation:</b>
+                <ul>
+                    <li>Training accuracy assessment</li>
+                    <li>Test accuracy assessment</li>
+                    <li>Performance comparison between training and test sets</li>
+                </ul>
+            </li>
+            <li><b>Prediction System:</b>
+                <ul>
+                    <li>Real-time classification of new sonar readings</li>
+                    <li>Input: 60-dimensional feature vector</li>
+                    <li>Output: Classification as Rock or Mine</li>
+                </ul>
+            </li>
+        </ol>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Binary Classification: Distinguishes between two object types</li>
+            <li>Feature Engineering: Utilizes 60 sonar signal characteristics</li>
+            <li>Model Validation: Separate training and testing phases</li>
+            <li>Predictive System: Ready-to-use classification interface</li>
+        </ul>
+        <h3>Applications</h3>
+        <ul>
+            <li>Naval mine detection systems</li>
+            <li>Underwater object identification</li>
+            <li>Geological surveying</li>
+            <li>Marine archaeology</li>
+            <li>Submarine navigation safety</li>
+        </ul>
+        <p>
+            This project demonstrates a practical implementation of machine learning for sonar-based object classification, combining signal processing concepts with supervised learning techniques.
+        </p>
+    </section>
 
 </body>
-
 </html>
