@@ -1390,6 +1390,49 @@ section .container {
   border-radius: 14px;
 }
 
+.about-photo-3d-wrap {
+  position: relative;
+  perspective: 1000px;
+  width: min(100%, 360px);
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+.about-photo-3d-wrap::before {
+  content: none;
+}
+
+.about-photo-3d-wrap::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: -16px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(3, 10, 24, 0.6);
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.about-photo-3d {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 40px rgba(2, 9, 22, 0.42);
+  transform: rotateY(-10deg) rotateX(5deg) translateZ(18px);
+  transform-origin: center;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.about-photo-3d-wrap:hover .about-photo-3d {
+  transform: rotateY(0deg) rotateX(0deg) translateZ(24px) scale(1.02);
+  box-shadow: 0 26px 46px rgba(2, 9, 22, 0.5);
+}
+
 .interests .icon-box,
 .services .icon-box,
 .contact .info-box,
@@ -1535,6 +1578,51 @@ section .container {
   color: var(--text-muted);
 }
 
+
+/* Interactive tilt cards */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  transition: transform 180ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 220ms ease;
+  box-shadow: 0 12px 30px rgba(4, 10, 25, 0.28);
+}
+
+.tilt-card:hover {
+  transform: perspective(900px) translate3d(0, -5px, 8px);
+}
+
+.tilt-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.16), transparent 52%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.tilt-card.is-tilting {
+  box-shadow: 0 24px 44px rgba(2, 9, 22, 0.44), 0 10px 20px rgba(57, 217, 138, 0.18);
+}
+
+.tilt-card.is-tilting::after {
+  opacity: 1;
+}
+
+@media (any-hover: none) {
+  .tilt-card,
+  .tilt-card.is-tilting {
+    transform: none !important;
+    box-shadow: 0 12px 30px rgba(4, 10, 25, 0.28);
+  }
+
+  .tilt-card::after,
+  .tilt-card.is-tilting::after {
+    opacity: 0;
+  }
+}
+
 .skills .icon-box {
   background: linear-gradient(145deg, #f7fbff, #eaf3ff);
   border-color: rgba(33, 77, 140, 0.2);
@@ -1668,6 +1756,15 @@ section .container {
 
   .portfolio .portfolio-wrap img {
     height: 190px;
+  }
+
+  .about-photo-3d-wrap {
+    width: min(84vw, 320px);
+    margin-bottom: 12px;
+  }
+
+  .about-photo-3d {
+    transform: none;
   }
 }
 

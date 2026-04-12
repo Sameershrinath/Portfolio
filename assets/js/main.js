@@ -148,4 +148,49 @@
     $('.venobox').venobox();
   });
 
+  // Homepage card tilt interaction for desktop pointers
+  $(document).ready(function() {
+    if (!window.matchMedia('(any-hover: hover)').matches) {
+      return;
+    }
+
+    var tiltSelector = '#header .check55, .interests .icon-box, .services .icon-box, .contact .info-box, .portfolio .portfolio-wrap, .projectpage';
+    var cards = document.querySelectorAll(tiltSelector);
+    if (!cards.length) {
+      return;
+    }
+
+    cards.forEach(function(card) {
+      if (card.dataset.tiltReady === 'true') {
+        return;
+      }
+
+      card.dataset.tiltReady = 'true';
+      card.classList.add('tilt-card');
+
+      card.addEventListener('mousemove', function(event) {
+        var rect = card.getBoundingClientRect();
+        var px = (event.clientX - rect.left) / rect.width;
+        var py = (event.clientY - rect.top) / rect.height;
+        var rotateY = (px - 0.5) * 10;
+        var rotateX = (0.5 - py) * 10;
+        var shiftX = (px - 0.5) * 3;
+        var shiftY = (py - 0.5) * 4;
+
+        card.style.setProperty('--mx', (px * 100).toFixed(2) + '%');
+        card.style.setProperty('--my', (py * 100).toFixed(2) + '%');
+        card.style.transform = 'perspective(900px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translate3d(' + shiftX.toFixed(2) + 'px, ' + shiftY.toFixed(2) + 'px, 10px)';
+      });
+
+      card.addEventListener('mouseenter', function() {
+        card.classList.add('is-tilting');
+      });
+
+      card.addEventListener('mouseleave', function() {
+        card.classList.remove('is-tilting');
+        card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translate3d(0, 0, 0)';
+      });
+    });
+  });
+
 })(jQuery);
