@@ -194,3 +194,62 @@
   });
 
 })(jQuery);
+
+// Mobile nav guidance tooltip: show once on mobile after 2s
+(function() {
+  function showMobileNavTip() {
+    try {
+      var forceShow = /([?&])showTip=1(&|$)/.test(location.search) || location.hash === '#showTip';
+      if (localStorage.getItem('mobileMenuTipShown') && !forceShow) return;
+      var btn = document.querySelector('.mobile-nav-toggle');
+      if (!btn) return;
+      var tip = document.createElement('div');
+      tip.className = 'mobile-nav-tip';
+      tip.innerHTML = 'Tap here for menu <span class="arrow">›</span>';
+      document.body.appendChild(tip);
+
+      // Position tip relative to button (recompute after it's in DOM)
+      var rect = btn.getBoundingClientRect();
+      var tipRect = tip.getBoundingClientRect();
+      // default place to the left of button
+      var left = rect.left - tipRect.width - 12;
+      // if it would go off-screen, place to the right
+      if (left < 8) left = rect.left + rect.width + 8;
+      // clamp right edge
+      var maxLeft = Math.max(8, window.innerWidth - tipRect.width - 8);
+      if (left > maxLeft) left = maxLeft;
+      tip.style.top = (rect.top + rect.height + 8) + 'px';
+      tip.style.left = left + 'px';
+
+      // animate in
+      requestAnimationFrame(function() { tip.classList.add('visible'); });
+
+      // hide on click or when mobile menu toggles
+      var hide = function() {
+        if (!tip) return;
+        tip.classList.remove('visible');
+        setTimeout(function() { tip && tip.remove(); }, 260);
+        localStorage.setItem('mobileMenuTipShown', '1');
+        btn.removeEventListener('click', hide);
+      };
+
+      // debug log
+      if (forceShow) console.info('mobile-nav-tip: forceShow enabled');
+
+      tip.addEventListener('click', function() { btn.click(); hide(); });
+      btn.addEventListener('click', hide);
+
+      // auto hide after 5s
+      setTimeout(hide, 5000);
+    } catch (e) {
+      console.error('mobile nav tip error', e);
+    }
+  }
+
+  // show after delay if on small screen
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (window.innerWidth < 992) showMobileNavTip();
+    }, 2000);
+  });
+})();

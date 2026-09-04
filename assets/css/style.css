@@ -307,6 +307,38 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+/* Mobile nav guidance tooltip */
+.mobile-nav-tip {
+  position: fixed;
+  z-index: 10001;
+  background: #12d640;
+  color: #03120a;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  display: inline-flex;
+  align-items: center;
+}
+.mobile-nav-tip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-nav-tip .arrow {
+  display: inline-block;
+  margin-left: 8px;
+  color: rgba(255,255,255,0.95);
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
+  .mobile-nav-tip { display: none !important; }
+}
+
 /* Header Top */
 #header.header-top {
   height: 90px;
